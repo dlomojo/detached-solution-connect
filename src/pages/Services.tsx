@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Settings, Shield, Cloud, Users, Phone, CheckCircle, ArrowRight } from 'lucide-react';
+import { Settings, Shield, Cloud, Users, Phone, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
@@ -12,29 +11,29 @@ const Services = () => {
   const serviceCategories = [
     {
       icon: Settings,
-      title: "Managed IT Services",
+      title: "Managed IT Services", 
       color: "blue",
       services: [
         {
           name: "24/7 Remote Monitoring & Management",
-          description: "Proactive system monitoring with automatic alerts and issue resolution before problems impact your business.",
+          description: "Proactive system monitoring with automatic alerts and issue resolution before problems impact your Waldorf business.",
           features: ["Real-time system monitoring", "Automated patch management", "Performance optimization", "Preventive maintenance"]
         },
         {
           name: "Help Desk & Technical Support",
-          description: "Comprehensive technical support via phone, email, and remote access with local onsite visits when needed.",
-          features: ["Tier 1-3 technical support", "Remote troubleshooting", "Local onsite visits", "Emergency response"]
+          description: "Comprehensive technical support via phone, email, and remote access with local onsite visits throughout the DMV area when needed.",
+          features: ["Tier 1-3 technical support", "Remote troubleshooting", "Local Charles County onsite visits", "Emergency response"]
         }
       ]
     },
     {
       icon: Shield,
       title: "Cybersecurity Services",
-      color: "purple",
+      color: "purple", 
       services: [
         {
           name: "Endpoint Protection & EDR",
-          description: "Advanced antivirus and endpoint detection to protect all devices from malware, ransomware, and threats.",
+          description: "Advanced antivirus and endpoint detection to protect all devices from malware, ransomware, and threats targeting Southern Maryland businesses.",
           features: ["Next-gen antivirus", "Threat detection & response", "Device compliance", "Quarantine management"]
         },
         {
@@ -44,12 +43,12 @@ const Services = () => {
         },
         {
           name: "Security Awareness Training",
-          description: "Regular phishing simulations and cybersecurity training to educate your team on security best practices.",
+          description: "Regular phishing simulations and cybersecurity training to educate your DMV area team on security best practices.",
           features: ["Phishing simulation tests", "Security awareness videos", "Policy development", "Incident response training"]
         },
         {
           name: "Backup & Disaster Recovery",
-          description: "Reliable cloud and offsite backup solutions with tested disaster recovery procedures to protect your data.",
+          description: "Reliable cloud and offsite backup solutions with tested disaster recovery procedures to protect your business data.",
           features: ["Automated cloud backups", "Local backup solutions", "Disaster recovery testing", "Business continuity planning"]
         }
       ]
@@ -61,7 +60,7 @@ const Services = () => {
       services: [
         {
           name: "Microsoft 365 / Google Workspace",
-          description: "Complete setup, management, and optimization of cloud productivity suites for seamless collaboration.",
+          description: "Complete setup, management, and optimization of cloud productivity suites for seamless collaboration across your organization.",
           features: ["Email migration & setup", "User management", "Security configuration", "Training & support"]
         },
         {
@@ -83,7 +82,7 @@ const Services = () => {
       services: [
         {
           name: "Network Design & Implementation",
-          description: "Complete network infrastructure setup including routers, switches, Wi-Fi, and structured cabling.",
+          description: "Complete network infrastructure setup including routers, switches, Wi-Fi, and structured cabling for Waldorf businesses.",
           features: ["Network design", "Equipment installation", "Wi-Fi optimization", "Cable management"]
         },
         {
@@ -98,7 +97,7 @@ const Services = () => {
         },
         {
           name: "Virtual CIO Services",
-          description: "Strategic IT planning and consulting to align technology decisions with business objectives.",
+          description: "Strategic IT planning and consulting to align technology decisions with your business objectives.",
           features: ["IT strategy development", "Technology roadmaps", "Budget planning", "Vendor management"]
         }
       ]
@@ -107,7 +106,7 @@ const Services = () => {
 
   const addOnServices = [
     "Professional Website Hosting & Management",
-    "Domain Registration & DNS Management",
+    "Domain Registration & DNS Management", 
     "Email System Migrations",
     "CRM/ERP Implementation & Support",
     "Mobile Device Management (MDM)",
@@ -134,15 +133,16 @@ const Services = () => {
         <div className="container mx-auto text-center">
           <div className="max-w-4xl mx-auto">
             <Badge variant="secondary" className="mb-6 text-blue-700 bg-blue-100">
-              Complete IT Solutions
+              <MapPin className="w-4 h-4 mr-2" />
+              Complete IT Solutions for Waldorf & DMV Area
             </Badge>
             <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Services Designed for
-              <span className="text-blue-600 block">Small Business Success</span>
+              IT Services Designed for
+              <span className="text-blue-600 block">Charles County Small Business Success</span>
             </h1>
             <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
               From proactive monitoring to strategic planning, we provide comprehensive IT services 
-              that keep your business running smoothly and securely.
+              that keep your Waldorf area business running smoothly and securely.
             </p>
           </div>
         </div>
@@ -190,10 +190,10 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="text-center mb-12">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              Additional Services
+              Additional Services for Southern Maryland Businesses
             </h2>
             <p className="text-xl text-slate-600 max-w-2xl mx-auto">
-              Specialized services to meet your unique business requirements.
+              Specialized services to meet your unique DMV area business requirements.
             </p>
           </div>
 
@@ -213,24 +213,24 @@ const Services = () => {
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-              Transparent, Affordable Pricing
+              Transparent, Affordable Pricing for Waldorf Businesses
             </h2>
             <p className="text-xl text-slate-600 mb-8">
-              We believe in honest, predictable pricing that fits small business budgets.
+              We believe in honest, predictable pricing that fits Charles County small business budgets.
             </p>
 
             <div className="grid md:grid-cols-3 gap-8 mb-12">
               <Card className="border-2 border-blue-200">
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-blue-600">Fixed Monthly Plans</CardTitle>
-                  <CardDescription>Predictable costs with no surprises</CardDescription>
+                  <CardDescription>Predictable costs with no surprises for DMV businesses</CardDescription>
                 </CardHeader>
               </Card>
               
               <Card className="border-2 border-green-200">
                 <CardHeader className="text-center">
                   <CardTitle className="text-2xl text-green-600">Per-User Pricing</CardTitle>
-                  <CardDescription>Scale up or down as your team grows</CardDescription>
+                  <CardDescription>Scale up or down as your Southern Maryland team grows</CardDescription>
                 </CardHeader>
               </Card>
               
@@ -243,9 +243,9 @@ const Services = () => {
             </div>
 
             <div className="bg-blue-50 p-8 rounded-lg">
-              <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Get Started?</h3>
+              <h3 className="text-2xl font-bold text-slate-900 mb-4">Ready to Get Started in Waldorf?</h3>
               <p className="text-slate-600 mb-6">
-                Schedule a free consultation to discuss your needs and get a customized quote.
+                Schedule a free consultation to discuss your needs and get a customized quote for your DMV area business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4 justify-center">
                 <Link to="/contact">
@@ -256,7 +256,7 @@ const Services = () => {
                 </Link>
                 <Button variant="outline" size="lg" className="border-blue-600 text-blue-600 hover:bg-blue-50">
                   <Phone className="mr-2 h-5 w-5" />
-                  Call (555) 123-4567
+                  Call (301) 555-0123
                 </Button>
               </div>
             </div>
