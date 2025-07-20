@@ -1,9 +1,8 @@
-
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
-import { Users, Heart, Shield, CheckCircle, Award, Clock } from 'lucide-react';
+import { Users, Heart, Shield, CheckCircle, Award, Clock, ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
@@ -71,37 +70,24 @@ const About = () => {
         </div>
       </section>
 
-      {/* Stats Section */}
-      <section className="py-12 bg-white border-b">
+      {/* About Content */}
+      <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            {stats.map((stat, index) => (
-              <div key={index}>
-                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.number}</div>
-                <div className="text-slate-600">{stat.label}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
-
-      {/* Story Section */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div>
-              <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-6">
-                Our Story
-              </h2>
-              <div className="space-y-6 text-slate-600 leading-relaxed">
+          <div className="grid md:grid-cols-2 gap-12 items-start">
+            <div className="space-y-6">
+              <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Story</h2>
+              <div className="prose max-w-none text-slate-600">
                 <p>
-                  Detached Solution was born from a simple observation: small businesses deserve the same level 
-                  of IT support as large corporations, but at a price they can afford. Too often, we saw local 
-                  businesses struggling with technology issues that disrupted their operations and frustrated their teams.
+                  Detached Solution was founded in 2014 by a team of IT professionals who recognized 
+                  that small businesses weren't getting the IT support they deserved. Too often, they 
+                  were forced to choose between overpriced enterprise solutions or unreliable break-fix services.
                 </p>
                 <p>
-                  Our founder, with over a decade of experience in enterprise IT, decided to bridge this gap by 
-                  creating a company focused exclusively on serving small businesses in our local community. 
+                  Our founders saw an opportunity to provide something different: enterprise-grade IT 
+                  services scaled and priced for small businesses, delivered with a personal touch and 
+                  a deep understanding of our clients' needs.
+                </p>
+                <p>
                   We understand that every business is unique, and we take the time to learn about your specific 
                   needs and challenges.
                 </p>
@@ -178,6 +164,24 @@ const About = () => {
         </div>
       </section>
 
+      {/* Stats Section */}
+      <section className="py-16 bg-slate-50">
+        <div className="container mx-auto px-4">
+          <div className="grid md:grid-cols-4 gap-6 text-center">
+            {stats.map((stat, index) => (
+              <div key={index} className="bg-white p-6 rounded-lg shadow-sm">
+                <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">
+                  {stat.number}
+                </div>
+                <div className="text-slate-600 font-medium">
+                  {stat.label}
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
       {/* Certifications */}
       <section className="py-16 bg-slate-50">
         <div className="container mx-auto px-4">
@@ -213,18 +217,10 @@ const About = () => {
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Let's discuss how we can support your business goals with reliable, affordable IT services.
           </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Link to="/contact">
-              <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
-                Schedule a Meeting
-              </Button>
-            </Link>
-            <Link to="/services">
-              <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
-                View Our Services
-              </Button>
-            </Link>
-          </div>
+          <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
+            Schedule Free Consultation
+            <ArrowRight className="ml-2 h-5 w-5" />
+          </Button>
         </div>
       </section>
 

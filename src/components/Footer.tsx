@@ -1,4 +1,3 @@
-
 import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Clock } from 'lucide-react';
@@ -22,61 +21,77 @@ const Footer = () => {
             </p>
           </div>
 
-          {/* Quick Links */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Quick Links</h3>
-            <ul className="space-y-2">
-              <li><Link to="/services" className="text-slate-300 hover:text-blue-400 transition-colors">Services</Link></li>
-              <li><Link to="/about" className="text-slate-300 hover:text-blue-400 transition-colors">About Us</Link></li>
-              <li><Link to="/resources" className="text-slate-300 hover:text-blue-400 transition-colors">Resources</Link></li>
-              <li><Link to="/contact" className="text-slate-300 hover:text-blue-400 transition-colors">Contact</Link></li>
-            </ul>
-          </div>
-
           {/* Services */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Services</h3>
-            <ul className="space-y-2">
-              <li><span className="text-slate-300">Managed IT Services</span></li>
-              <li><span className="text-slate-300">Cybersecurity</span></li>
-              <li><span className="text-slate-300">Cloud Services</span></li>
-              <li><span className="text-slate-300">IT Consulting</span></li>
+          <div>
+            <h3 className="font-bold text-lg mb-4">Services</h3>
+            <ul className="space-y-3">
+              <li>
+                <Link to="/services" className="text-slate-300 hover:text-blue-400 transition-colors">
+                  Managed IT Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-slate-300 hover:text-blue-400 transition-colors">
+                  Cybersecurity
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-slate-300 hover:text-blue-400 transition-colors">
+                  Cloud Services
+                </Link>
+              </li>
+              <li>
+                <Link to="/services" className="text-slate-300 hover:text-blue-400 transition-colors">
+                  IT Consulting
+                </Link>
+              </li>
             </ul>
           </div>
 
-          {/* Contact Info */}
-          <div className="space-y-4">
-            <h3 className="font-semibold text-lg">Contact Info</h3>
-            <div className="space-y-3">
-              <div className="flex items-center space-x-3">
-                <Phone className="h-5 w-5 text-blue-400" />
-                <span className="text-slate-300">(555) 123-4567</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Mail className="h-5 w-5 text-blue-400" />
+          {/* Contact */}
+          <div>
+            <h3 className="font-bold text-lg mb-4">Contact Us</h3>
+            <ul className="space-y-4">
+              <li className="flex items-start space-x-3">
+                <Phone className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                <span className="text-slate-300">(301) 555-0123</span>
+              </li>
+              <li className="flex items-start space-x-3">
+                <Mail className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
                 <span className="text-slate-300">info@detachedsolution.com</span>
-              </div>
-              <div className="flex items-center space-x-3">
-                <Clock className="h-5 w-5 text-blue-400" />
-                <span className="text-slate-300">24/7 Support Available</span>
-              </div>
+              </li>
+              <li className="flex items-start space-x-3">
+                <Clock className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
+                <span className="text-slate-300">Mon-Fri: 8AM-6PM</span>
+              </li>
+            </ul>
+          </div>
+
+          {/* Newsletter */}
+          <div>
+            <h3 className="font-bold text-lg mb-4">Stay Updated</h3>
+            <p className="text-slate-300 mb-4">
+              Subscribe to our newsletter for tech tips and company news.
+            </p>
+            <div className="flex mt-2">
+              <Button className="w-full bg-blue-600 hover:bg-blue-700">
+                Subscribe
+              </Button>
             </div>
-            <Button className="w-full bg-blue-600 hover:bg-blue-700">
-              Schedule Consultation
-            </Button>
           </div>
         </div>
 
-        <div className="border-t border-slate-700 mt-12 pt-8">
+        {/* Bottom Bar */}
+        <div className="border-t border-slate-800 mt-12 pt-8">
           <div className="flex flex-col md:flex-row justify-between items-center">
-            <p className="text-slate-400 text-sm">
-              © 2024 Detached Solution. All rights reserved.
+            <p className="text-slate-400 text-sm mb-4 md:mb-0">
+              © {new Date().getFullYear()} Detached Solution. All rights reserved.
             </p>
             <div className="flex space-x-6 mt-4 md:mt-0">
               <Link to="/privacy" className="text-slate-400 hover:text-blue-400 text-sm transition-colors">
                 Privacy Policy
               </Link>
-              <Link to="/terms" className="text-slate-400 hover:text-blue-400 text-sm transition-colors">
+              <Link to="/privacy" className="text-slate-400 hover:text-blue-400 text-sm transition-colors">
                 Terms of Service
               </Link>
             </div>

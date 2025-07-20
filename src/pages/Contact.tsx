@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
@@ -56,7 +55,7 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "(555) 123-4567",
+      details: "(301) 555-0123",
       description: "Available 24/7 for emergencies",
       color: "blue"
     },
@@ -102,37 +101,35 @@ const Contact = () => {
       {/* Contact Methods */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
-          <div className="grid md:grid-cols-3 gap-8 mb-16">
+          <div className="grid md:grid-cols-3 gap-8 mb-12">
             {contactMethods.map((method, index) => (
-              <Card key={index} className="text-center hover:shadow-lg transition-shadow duration-300">
-                <CardHeader>
-                  <div className={`mx-auto mb-4 w-16 h-16 bg-${method.color}-100 rounded-full flex items-center justify-center`}>
-                    <method.icon className={`h-8 w-8 text-${method.color}-600`} />
+              <Card key={index} className={`border-l-4 border-l-${method.color}-600 hover:shadow-lg transition-shadow duration-300`}>
+                <CardContent className="p-6">
+                  <div className="flex items-center space-x-4 mb-4">
+                    <div className={`w-12 h-12 bg-${method.color}-100 rounded-full flex items-center justify-center`}>
+                      <method.icon className={`h-6 w-6 text-${method.color}-600`} />
+                    </div>
+                    <div>
+                      <h3 className="font-bold text-lg text-slate-900">{method.title}</h3>
+                      <p className={`text-${method.color}-600 font-medium`}>{method.details}</p>
+                    </div>
                   </div>
-                  <CardTitle className="text-xl">{method.title}</CardTitle>
-                  <div className="text-2xl font-bold text-slate-900">{method.details}</div>
-                  <CardDescription>{method.description}</CardDescription>
-                </CardHeader>
+                  <p className="text-slate-600">{method.description}</p>
+                </CardContent>
               </Card>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Contact Form & Info */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4">
           <div className="grid lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
-            <Card className="shadow-lg">
+            <Card className="border-none shadow-lg">
               <CardHeader>
-                <CardTitle className="text-2xl">Send Us a Message</CardTitle>
-                <CardDescription>
-                  Fill out the form below and we'll get back to you within 24 hours.
+                <CardTitle className="text-2xl font-bold text-slate-900">Send Us a Message</CardTitle>
+                <CardDescription className="text-slate-600">
+                  Fill out the form below and we'll get back to you as soon as possible.
                 </CardDescription>
               </CardHeader>
               <CardContent>
-                <form onSubmit={handleSubmit} className="space-y-6">
+                <form onSubmit={handleSubmit} className="space-y-4">
                   <div className="grid md:grid-cols-2 gap-4">
                     <div className="space-y-2">
                       <Label htmlFor="name">Full Name *</Label>
@@ -171,14 +168,15 @@ const Contact = () => {
                       />
                     </div>
                     <div className="space-y-2">
-                      <Label htmlFor="phone">Phone Number</Label>
+                      <Label htmlFor="phone">Phone Number *</Label>
                       <Input
                         id="phone"
                         name="phone"
                         type="tel"
                         value={formData.phone}
                         onChange={handleChange}
-                        placeholder="(555) 123-4567"
+                        required
+                        placeholder="(123) 456-7890"
                       />
                     </div>
                   </div>
@@ -203,48 +201,37 @@ const Contact = () => {
                       value={formData.message}
                       onChange={handleChange}
                       required
-                      placeholder="Tell us about your IT needs, challenges, or questions..."
+                      placeholder="Please provide details about your inquiry..."
                       rows={5}
                     />
                   </div>
 
-                  <Button 
-                    type="submit" 
-                    className="w-full bg-blue-600 hover:bg-blue-700 py-3"
-                    disabled={isSubmitting}
-                  >
-                    {isSubmitting ? 'Sending Message...' : 'Send Message'}
+                  <Button type="submit" className="w-full bg-blue-600 hover:bg-blue-700" disabled={isSubmitting}>
+                    {isSubmitting ? 'Sending...' : 'Send Message'}
                   </Button>
-
-                  <p className="text-xs text-slate-500 text-center">
-                    By submitting this form, you agree to be contacted by Detached Solution. 
-                    We respect your privacy and will never share your information.
-                  </p>
                 </form>
               </CardContent>
             </Card>
 
-            {/* Additional Info */}
             <div className="space-y-8">
               <Card className="border-l-4 border-l-blue-600">
                 <CardHeader>
-                  <CardTitle className="text-xl">Emergency Support</CardTitle>
-                  <CardDescription>
-                    Technology emergencies don't wait for business hours. When you need immediate help:
-                  </CardDescription>
+                  <CardTitle className="text-xl">Our Location</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="space-y-3">
-                    <div className="flex items-center space-x-3">
-                      <Phone className="h-5 w-5 text-blue-600" />
-                      <span className="font-semibold">Call: (555) 123-4567</span>
-                    </div>
-                    <div className="flex items-center space-x-3">
-                      <Mail className="h-5 w-5 text-blue-600" />
-                      <span className="font-semibold">Email: emergency@detachedsolution.com</span>
-                    </div>
-                    <p className="text-sm text-slate-600 pt-2">
-                      Our emergency support team is available 24/7 for critical issues that impact your business operations.
+                  <div className="aspect-video rounded-lg overflow-hidden bg-slate-100 mb-4">
+                    <img 
+                      src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=300&fit=crop"
+                      alt="Office building"
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
+                  <div className="space-y-2">
+                    <p className="font-medium text-slate-900">Detached Solution Headquarters</p>
+                    <p className="text-slate-600">
+                      123 Business Blvd<br />
+                      Suite 456<br />
+                      Your City, YS 12345
                     </p>
                   </div>
                 </CardContent>
@@ -288,27 +275,11 @@ const Contact = () => {
                         <span className="text-green-600 text-sm font-bold">4</span>
                       </div>
                       <div>
-                        <div className="font-semibold text-slate-900">Customized Proposal</div>
-                        <div className="text-sm text-slate-600">We provide a detailed proposal tailored to your business</div>
+                        <div className="font-semibold text-slate-900">Customized Solution</div>
+                        <div className="text-sm text-slate-600">We develop a personalized plan for your business</div>
                       </div>
                     </div>
                   </div>
-                </CardContent>
-              </Card>
-
-              <Card className="bg-blue-50 border-blue-200">
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-2 text-blue-700 mb-3">
-                    <CheckCircle className="h-5 w-5" />
-                    <span className="font-semibold">Free IT Assessment</span>
-                  </div>
-                  <p className="text-blue-600 text-sm mb-3">
-                    Every new client receives a comprehensive IT assessment at no cost. We'll identify opportunities 
-                    to improve efficiency, security, and cost-effectiveness.
-                  </p>
-                  <Button variant="outline" className="border-blue-600 text-blue-600 hover:bg-blue-100 w-full">
-                    Learn More About Our Assessment
-                  </Button>
                 </CardContent>
               </Card>
             </div>

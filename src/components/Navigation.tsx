@@ -1,4 +1,3 @@
-
 import React, { useState } from 'react';
 import { Button } from "@/components/ui/button";
 import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
@@ -52,7 +51,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost" size="sm" className="text-slate-700">
               <Phone className="h-4 w-4 mr-2" />
-              (555) 123-4567
+              (301) 555-0123
             </Button>
             <Button size="sm" className="bg-blue-600 hover:bg-blue-700">
               Free Consultation
@@ -85,7 +84,7 @@ const Navigation = () => {
                 <div className="pt-6 border-t border-slate-200 space-y-4">
                   <Button variant="ghost" className="w-full justify-start text-slate-700">
                     <Phone className="h-4 w-4 mr-2" />
-                    (555) 123-4567
+                    (301) 555-0123
                   </Button>
                   <Button className="w-full bg-blue-600 hover:bg-blue-700">
                     Free Consultation
