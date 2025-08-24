@@ -10,6 +10,7 @@ import About from "./pages/About";
 import Contact from "./pages/Contact";
 import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
+import CalendlyWidget from "./components/CalendlyWidget";
 
 const queryClient = new QueryClient();
 
@@ -29,6 +30,7 @@ const App = () => (
           <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
+      <CalendlyWidget />
     </TooltipProvider>
   </QueryClientProvider>
 );
