@@ -73,7 +73,7 @@ const Index = () => {
             </div>
             <div className="flex items-center space-x-2">
               <Users className="h-5 w-5 text-orange-600" />
-              <span className="text-slate-700">50+ Happy Clients</span>
+              <span className="text-slate-700">Trusted by Local Businesses</span>
             </div>
           </div>
         </div>
@@ -218,93 +218,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Testimonials */}
-      <section className="py-16 bg-slate-50">
-        <div className="container mx-auto px-4">
-          <div className="text-center mb-12">
-            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
-              What Business Owners Say
-            </h2>
-            <p className="text-xl text-slate-600">
-              Don't just take our word for it—hear from business owners we've helped.
-            </p>
-          </div>
 
-          <div className="grid md:grid-cols-3 gap-8">
-            <Card className="border-none shadow-lg">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <img 
-                    src="https://images.unsplash.us/photo-1507003211169-0a1dd7228f2d?w=60&h=60&fit=crop&crop=face"
-                    alt="Marcus Johnson - Local restaurant owner"
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i}>⭐</span>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-slate-600 mb-4 italic">
-                  "Before Detached Solution, we were constantly dealing with computer problems at our restaurant. Now everything just works. They've saved us so much time and frustration."
-                </p>
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-slate-900">Marcus Johnson</p>
-                  <p className="text-sm text-slate-500">Owner, Johnson Family Restaurant</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-none shadow-lg">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <img 
-                    src="https://images.unsplash.us/photo-1472099645785-5658abf4ff4e?w=60&h=60&fit=crop&crop=face"
-                    alt="David Williams - Auto repair shop manager"
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i}>⭐</span>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-slate-600 mb-4 italic">
-                  "Their cybersecurity training helped us avoid a major phishing attack. The team is always available when we need them, and they speak our language—no tech jargon."
-                </p>
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-slate-900">David Williams</p>
-                  <p className="text-sm text-slate-500">Manager, Williams Auto Repair</p>
-                </div>
-              </CardContent>
-            </Card>
-
-            <Card className="border-none shadow-lg">
-              <CardContent className="p-6">
-                <div className="flex items-center mb-4">
-                  <img 
-                    src="https://images.unsplash.us/photo-1494790108755-2616c0763594?w=60&h=60&fit=crop&crop=face"
-                    alt="Angela Rodriguez - Insurance agency owner"
-                    className="w-12 h-12 rounded-full mr-4"
-                  />
-                  <div className="flex text-yellow-400">
-                    {[...Array(5)].map((_, i) => (
-                      <span key={i}>⭐</span>
-                    ))}
-                  </div>
-                </div>
-                <p className="text-slate-600 mb-4 italic">
-                  "Moving to the cloud seemed scary, but they made it simple. Our team can now work from anywhere, and our data is more secure than ever."
-                </p>
-                <div className="border-t pt-4">
-                  <p className="font-semibold text-slate-900">Angela Rodriguez</p>
-                  <p className="text-sm text-slate-500">Owner, Rodriguez Insurance Agency</p>
-                </div>
-              </CardContent>
-            </Card>
-          </div>
-        </div>
-      </section>
 
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white">
