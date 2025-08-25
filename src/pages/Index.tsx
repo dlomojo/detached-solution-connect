@@ -213,7 +213,11 @@ const Index = () => {
               </div>
             </div>
             <div className="bg-gradient-to-br from-blue-50 to-slate-100 p-8 rounded-lg">
-              <ConsultationForm />
+              <div 
+                className="calendly-inline-widget" 
+                data-url="https://calendly.com/dloimage/30min?hide_event_type_details=1" 
+                style={{minWidth: '320px', height: '700px'}}
+              ></div>
             </div>
           </div>
         </div>
