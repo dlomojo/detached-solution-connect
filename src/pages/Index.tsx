@@ -7,6 +7,8 @@ import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ConsultationForm from '@/components/ConsultationForm';
+import TrustBadges from '@/components/TrustBadges';
+import SocialProof from '@/components/SocialProof';
 import { openCalendlyPopup } from '@/components/CalendlyWidget';
 
 const Index = () => {
@@ -56,29 +58,7 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Trust Indicators */}
-      <section className="py-12 bg-white border-b">
-        <div className="container mx-auto px-4">
-          <div className="flex flex-wrap justify-center items-center gap-8 text-center">
-            <div className="flex items-center space-x-2">
-              <CheckCircle className="h-5 w-5 text-green-600" />
-              <span className="text-slate-700">Local Support</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Clock className="h-5 w-5 text-blue-600" />
-              <span className="text-slate-700">24/7 Monitoring</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Shield className="h-5 w-5 text-purple-600" />
-              <span className="text-slate-700">Cybersecurity Experts</span>
-            </div>
-            <div className="flex items-center space-x-2">
-              <Users className="h-5 w-5 text-orange-600" />
-              <span className="text-slate-700">Trusted by Local Businesses</span>
-            </div>
-          </div>
-        </div>
-      </section>
+      <TrustBadges />
 
       {/* Core Services */}
       <section className="py-16 bg-slate-50">
@@ -215,6 +195,8 @@ const Index = () => {
       </section>
 
 
+
+      <SocialProof />
 
       {/* CTA Section */}
       <section className="py-16 bg-blue-600 text-white">
