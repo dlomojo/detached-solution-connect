@@ -6,6 +6,7 @@ import { Settings, Shield, Cloud, Users, Phone, CheckCircle, ArrowRight, MapPin 
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import { Link } from 'react-router-dom';
+import { openCalendlyPopup } from '@/components/CalendlyWidget';
 
 const Services = () => {
   const serviceCategories = [
@@ -219,7 +220,7 @@ const Services = () => {
             we can help your business become more efficient and secure.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
+            <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3" onClick={openCalendlyPopup}>
               Schedule Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

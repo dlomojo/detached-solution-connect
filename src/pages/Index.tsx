@@ -7,6 +7,7 @@ import { Link } from 'react-router-dom';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import ConsultationForm from '@/components/ConsultationForm';
+import { openCalendlyPopup } from '@/components/CalendlyWidget';
 
 const Index = () => {
   return (
@@ -31,7 +32,7 @@ const Index = () => {
                 We handle the technology so you can focus on growing your business.
               </p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3">
+                <Button size="lg" className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-3" onClick={openCalendlyPopup}>
                   Schedule Free Consultation
                   <ArrowRight className="ml-2 h-5 w-5" />
                 </Button>
@@ -230,7 +231,7 @@ const Index = () => {
             Schedule a free consultation and discover how we can help your business run more efficiently and securely.
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
+            <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3" onClick={openCalendlyPopup}>
               Schedule Free Consultation
               <ArrowRight className="ml-2 h-5 w-5" />
             </Button>

@@ -32,6 +32,14 @@ const CalendlyWidget = () => {
   return null;
 };
 
+export const openCalendlyPopup = () => {
+  if (window.Calendly) {
+    window.Calendly.initPopupWidget({
+      url: 'https://calendly.com/dloimage/30min'
+    });
+  }
+};
+
 declare global {
   interface Window {
     Calendly: any;
