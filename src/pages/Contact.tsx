@@ -4,11 +4,13 @@ import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
 import { Textarea } from "@/components/ui/textarea";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Badge } from "@/components/ui/badge";
-import { Phone, Mail, Clock, CheckCircle } from 'lucide-react';
+import { Phone, Mail, Clock, Calendar } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
+import Hero from '@/components/Hero';
+import TrustBadges from '@/components/TrustBadges';
 import { useToast } from "@/hooks/use-toast";
+import { openCalendlyPopup } from '@/components/CalendlyWidget';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -79,21 +81,52 @@ const Contact = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 bg-gradient-to-br from-blue-50 to-slate-100">
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6 text-blue-700 bg-blue-100">
-              Get In Touch
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Let's Discuss Your
-              <span className="text-blue-600 block">IT Needs</span>
-            </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Ready to simplify your technology? We're here to help. Reach out for a free consultation 
-              and discover how we can support your business goals.
+      <div className="pt-20">
+        <Hero />
+        <TrustBadges />
+      </div>
+
+      {/* Contact Options */}
+      <section className="py-16 bg-white">
+        <div className="container mx-auto px-4">
+          <div className="text-center mb-12">
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-4">
+              Get Started Today
+            </h2>
+            <p className="text-xl text-slate-600 max-w-2xl mx-auto">
+              Choose how you'd like to connect with us
             </p>
+          </div>
+          
+          <div className="grid md:grid-cols-2 gap-8 max-w-4xl mx-auto mb-16">
+            <Card className="border-2 border-blue-200 hover:border-blue-400 transition-colors">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center">
+                  <Mail className="h-8 w-8 text-blue-600" />
+                </div>
+                <CardTitle className="text-2xl">Send Us a Message</CardTitle>
+                <CardDescription>
+                  Fill out our contact form and we'll respond within 4 hours
+                </CardDescription>
+              </CardHeader>
+            </Card>
+            
+            <Card className="border-2 border-green-200 hover:border-green-400 transition-colors">
+              <CardHeader className="text-center">
+                <div className="mx-auto mb-4 w-16 h-16 bg-green-100 rounded-full flex items-center justify-center">
+                  <Calendar className="h-8 w-8 text-green-600" />
+                </div>
+                <CardTitle className="text-2xl">Book a Consulting Session</CardTitle>
+                <CardDescription>
+                  Schedule a free 30-minute consultation to discuss your IT needs
+                </CardDescription>
+              </CardHeader>
+              <CardContent className="text-center">
+                <Button className="bg-green-600 hover:bg-green-700" onClick={openCalendlyPopup}>
+                  Schedule Now
+                </Button>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>
@@ -102,22 +135,48 @@ const Contact = () => {
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4">
           <div className="grid md:grid-cols-3 gap-8 mb-12">
-            {contactMethods.map((method, index) => (
-              <Card key={index} className={`border-l-4 border-l-${method.color}-600 hover:shadow-lg transition-shadow duration-300`}>
-                <CardContent className="p-6">
-                  <div className="flex items-center space-x-4 mb-4">
-                    <div className={`w-12 h-12 bg-${method.color}-100 rounded-full flex items-center justify-center`}>
-                      <method.icon className={`h-6 w-6 text-${method.color}-600`} />
-                    </div>
-                    <div>
-                      <h3 className="font-bold text-lg text-slate-900">{method.title}</h3>
-                      <p className={`text-${method.color}-600 font-medium`}>{method.details}</p>
-                    </div>
+            <Card className="border-l-4 border-l-blue-600 hover:shadow-lg transition-shadow duration-300">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-blue-100 rounded-full flex items-center justify-center">
+                    <Phone className="h-6 w-6 text-blue-600" />
                   </div>
-                  <p className="text-slate-600">{method.description}</p>
-                </CardContent>
-              </Card>
-            ))}
+                  <div>
+                    <h3 className="font-bold text-lg text-slate-900">Call Us</h3>
+                    <p className="text-blue-600 font-medium">(301) 555-0123</p>
+                  </div>
+                </div>
+                <p className="text-slate-600">Available 24/7 for emergencies</p>
+              </CardContent>
+            </Card>
+            <Card className="border-l-4 border-l-green-600 hover:shadow-lg transition-shadow duration-300">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-green-100 rounded-full flex items-center justify-center">
+                    <Mail className="h-6 w-6 text-green-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-slate-900">Email Us</h3>
+                    <p className="text-green-600 font-medium">info@detachedsolution.com</p>
+                  </div>
+                </div>
+                <p className="text-slate-600">We respond within 4 hours</p>
+              </CardContent>
+            </Card>
+            <Card className="border-l-4 border-l-purple-600 hover:shadow-lg transition-shadow duration-300">
+              <CardContent className="p-6">
+                <div className="flex items-center space-x-4 mb-4">
+                  <div className="w-12 h-12 bg-purple-100 rounded-full flex items-center justify-center">
+                    <Clock className="h-6 w-6 text-purple-600" />
+                  </div>
+                  <div>
+                    <h3 className="font-bold text-lg text-slate-900">Business Hours</h3>
+                    <p className="text-purple-600 font-medium">Mon-Fri: 8AM-6PM</p>
+                  </div>
+                </div>
+                <p className="text-slate-600">Emergency support 24/7</p>
+              </CardContent>
+            </Card>
           </div>
 
           <div className="grid lg:grid-cols-2 gap-12">

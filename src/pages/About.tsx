@@ -1,11 +1,12 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
 import { Users, Heart, Shield, CheckCircle, Award, Clock, ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Link } from 'react-router-dom';
+import Hero from '@/components/Hero';
+import TrustBadges from '@/components/TrustBadges';
+import { openCalendlyPopup } from '@/components/CalendlyWidget';
 
 const About = () => {
   const values = [
@@ -51,24 +52,10 @@ const About = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 bg-gradient-to-br from-blue-50 to-slate-100">
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6 text-blue-700 bg-blue-100">
-              About Detached Solution
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Your Local IT Partner for
-              <span className="text-blue-600 block">Small Business Success</span>
-            </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Founded with a mission to make enterprise-level IT support accessible and affordable 
-              for local small businesses, we're more than just your IT provider—we're your technology partner.
-            </p>
-          </div>
-        </div>
-      </section>
+      <div className="pt-20">
+        <Hero />
+        <TrustBadges />
+      </div>
 
       {/* About Content */}
       <section className="py-16 bg-white">
@@ -217,7 +204,7 @@ const About = () => {
           <p className="text-xl mb-8 text-blue-100 max-w-2xl mx-auto">
             Let's discuss how we can support your business goals with reliable, affordable IT services.
           </p>
-          <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3">
+          <Button size="lg" variant="secondary" className="bg-white text-blue-600 hover:bg-gray-100 px-8 py-3" onClick={openCalendlyPopup}>
             Schedule Free Consultation
             <ArrowRight className="ml-2 h-5 w-5" />
           </Button>

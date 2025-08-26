@@ -14,8 +14,8 @@ const SocialProof = () => {
             <p className="text-slate-600">Response Time</p>
           </div>
           <div className="bg-white p-6 rounded-lg shadow-lg">
-            <div className="text-3xl font-bold text-purple-600 mb-2">$0</div>
-            <p className="text-slate-600">Setup Fees</p>
+            <div className="text-3xl font-bold text-purple-600 mb-2">100%</div>
+            <p className="text-slate-600">Satisfaction</p>
           </div>
         </div>
       </div>

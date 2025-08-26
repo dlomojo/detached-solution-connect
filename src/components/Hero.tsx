@@ -20,7 +20,7 @@ export default function Hero() {
           Reliable IT that grows <span className="text-blue-300">with your business</span>
         </h1>
         <p className="max-w-2xl text-base text-white/90 md:text-lg">
-          Detached Solution keeps your systems fast, secure, and always-on. Same-day onboarding, real-time monitoring, and clear SLAs.
+          Detached Solution keeps your systems fast, secure, and always-on. Professional onboarding, real-time monitoring, and clear SLAs.
         </p>
         <div className="flex flex-wrap gap-3">
           <button

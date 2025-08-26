@@ -1,11 +1,11 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
-import { Badge } from "@/components/ui/badge";
-import { Settings, Shield, Cloud, Users, Phone, CheckCircle, ArrowRight, MapPin } from 'lucide-react';
+import { Settings, Shield, Cloud, Users, Phone, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Link } from 'react-router-dom';
+import Hero from '@/components/Hero';
+import TrustBadges from '@/components/TrustBadges';
 import { openCalendlyPopup } from '@/components/CalendlyWidget';
 
 const Services = () => {
@@ -129,25 +129,11 @@ const Services = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 bg-gradient-to-br from-blue-50 to-slate-100">
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6 text-blue-700 bg-blue-100">
-              <MapPin className="w-4 h-4 mr-2" />
-              Complete IT Solutions
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              IT Services Designed for
-              <span className="text-blue-600 block">Small Business Success</span>
-            </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              From proactive monitoring to strategic planning, we provide comprehensive IT services 
-              that keep your business running smoothly and securely.
-            </p>
-          </div>
-        </div>
-      </section>
+      <div className="pt-20">
+        <Hero />
+      </div>
+
+      <TrustBadges />
 
       {/* Service Categories */}
       {serviceCategories.map((category, categoryIndex) => (

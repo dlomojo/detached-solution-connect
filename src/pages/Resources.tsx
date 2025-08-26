@@ -7,7 +7,9 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { FileText, Shield, Cloud, Settings, Users, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import { Link } from 'react-router-dom';
+import Hero from '@/components/Hero';
+import TrustBadges from '@/components/TrustBadges';
+import { openCalendlyPopup } from '@/components/CalendlyWidget';
 
 const Resources = () => {
   const guides = [
@@ -107,24 +109,10 @@ const Resources = () => {
     <div className="min-h-screen bg-background">
       <Navigation />
       
-      {/* Hero Section */}
-      <section className="pt-20 pb-16 px-4 bg-gradient-to-br from-blue-50 to-slate-100">
-        <div className="container mx-auto text-center">
-          <div className="max-w-4xl mx-auto">
-            <Badge variant="secondary" className="mb-6 text-blue-700 bg-blue-100">
-              IT Resources & Support
-            </Badge>
-            <h1 className="text-4xl md:text-5xl font-bold text-slate-900 mb-6 leading-tight">
-              Knowledge Center for
-              <span className="text-blue-600 block">Small Business IT</span>
-            </h1>
-            <p className="text-xl text-slate-600 mb-8 max-w-3xl mx-auto leading-relaxed">
-              Helpful guides, tips, and answers to common IT questions. Empower your team with 
-              practical knowledge to make better technology decisions.
-            </p>
-          </div>
-        </div>
-      </section>
+      <div className="pt-20">
+        <Hero />
+        <TrustBadges />
+      </div>
 
       {/* Quick IT Tips */}
       <section className="py-16 bg-white">
@@ -193,12 +181,10 @@ const Resources = () => {
             <p className="text-slate-600 mb-4">
               Want a personalized IT assessment for your business?
             </p>
-            <Link to="/contact">
-              <Button className="bg-blue-600 hover:bg-blue-700">
-                Schedule Free Consultation
-                <ArrowRight className="ml-2 h-5 w-5" />
-              </Button>
-            </Link>
+            <Button className="bg-blue-600 hover:bg-blue-700" onClick={openCalendlyPopup}>
+              Schedule Free Consultation
+              <ArrowRight className="ml-2 h-5 w-5" />
+            </Button>
           </div>
         </div>
       </section>
