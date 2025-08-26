@@ -18,28 +18,28 @@ const Resources = () => {
       title: "Cybersecurity Essentials",
       description: "Protect your business from cyber threats with these fundamental security practices.",
       category: "Security",
-      color: "red"
+      file: "/document/cybersecurity-essentials.pdf"
     },
     {
       icon: Cloud,
       title: "Moving to the Cloud",
       description: "A beginner's guide to understanding cloud services and their benefits for small business.",
       category: "Cloud Computing",
-      color: "blue"
+      file: "/document/moving-to-cloud.pdf"
     },
     {
       icon: Settings,
       title: "IT Budget Planning",
       description: "How to plan and budget for technology investments that support business growth.",
       category: "Planning",
-      color: "green"
+      file: "/document/it-budget-planning.pdf"
     },
     {
       icon: Users,
       title: "Remote Work Setup",
       description: "Essential tools and practices for setting up secure and productive remote work.",
       category: "Remote Work",
-      color: "purple"
+      file: "/document/remote-work-setup.pdf"
     }
   ];
 
@@ -168,7 +168,12 @@ const Resources = () => {
                   <CardDescription>{guide.description}</CardDescription>
                 </CardHeader>
                 <CardContent className="text-center">
-                  <Button variant="outline" size="sm" className="w-full">
+                  <Button 
+                    variant="outline" 
+                    size="sm" 
+                    className="w-full"
+                    onClick={() => window.open(guide.file, '_blank')}
+                  >
                     <FileText className="h-4 w-4 mr-2" />
                     Read Guide
                   </Button>
