@@ -14,7 +14,9 @@ import CalendlyWidget from "./components/CalendlyWidget";
 
 const queryClient = new QueryClient();
 
-const App = () => (
+const App = () => {
+
+  return (
   <QueryClientProvider client={queryClient}>
     <TooltipProvider>
       <Toaster />
@@ -33,6 +35,7 @@ const App = () => (
       <CalendlyWidget />
     </TooltipProvider>
   </QueryClientProvider>
-);
+  );
+};
 
 export default App;
