@@ -43,7 +43,7 @@ const About = () => {
 
   const stats = [
     { number: "50+", label: "Happy Clients" },
-    { number: "99.7;%", label: "Uptime Guarantee" },
+    { number: "99.7%", label: "Uptime Guarantee" },
     { number: "24/7", label: "Support Available" },
     { number: "10+", label: "Years Experience" }
   ];
@@ -65,7 +65,7 @@ const About = () => {
               <h2 className="text-3xl font-bold text-slate-900 mb-4">Our Story</h2>
               <div className="prose max-w-none text-slate-600">
                 <p>
-                  Detached Solution was founded in 2014 by a team of IT professionals who recognized 
+                  Detached Solution was founded in 2020 by a team of IT professionals who recognized 
                   that small businesses weren't getting the IT support they deserved. Too often, they 
                   were forced to choose between overpriced enterprise solutions or unreliable break-fix services.
                 </p>
@@ -79,7 +79,7 @@ const About = () => {
                   needs and challenges.
                 </p>
                 <p>
-                  Today, we're proud to serve over 50 local businesses, from family restaurants to professional 
+                  Today, we're proud to serve over 50 small businesses, from family restaurants to professional 
                   services firms, helping them leverage technology to grow and succeed in an increasingly digital world.
                 </p>
               </div>
