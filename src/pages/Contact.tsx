@@ -275,23 +275,12 @@ const Contact = () => {
             <div className="space-y-8">
               <Card className="border-l-4 border-l-blue-600">
                 <CardHeader>
-                  <CardTitle className="text-xl">Our Location</CardTitle>
+                  <CardTitle className="text-xl">Service Area</CardTitle>
                 </CardHeader>
                 <CardContent>
-                  <div className="aspect-video rounded-lg overflow-hidden bg-slate-100 mb-4">
-                    <img 
-                      src="https://images.unsplash.com/photo-1497366811353-6870744d04b2?w=600&h=300&fit=crop"
-                      alt="Office building"
-                      className="w-full h-full object-cover"
-                    />
-                  </div>
-                  <div className="space-y-2">
-                    <p className="font-medium text-slate-900">Detached Solution Headquarters</p>
-                    <p className="text-slate-600">
-                      123 Business Blvd<br />
-                      Suite 456<br />
-                      Your City, YS 12345
-                    </p>
+                  <div className="text-center py-8">
+                    <p className="text-2xl font-semibold text-slate-900 mb-2">Proudly Serving</p>
+                    <p className="text-xl text-blue-600 font-medium">Southern Maryland</p>
                   </div>
                 </CardContent>
               </Card>

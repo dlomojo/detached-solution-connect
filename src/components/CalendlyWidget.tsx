@@ -17,7 +17,7 @@ const CalendlyWidget = () => {
           text: 'Schedule a Consulting session',
           color: '#2563eb',
           textColor: '#ffffff',
-          branding: true
+          branding: false
         });
       }
     };

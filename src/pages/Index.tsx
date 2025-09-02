@@ -8,7 +8,7 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import ServicesSection from '@/components/ServicesSection';
-import PhotoShowcase from '@/components/PhotoShowcase';
+
 import CTA from '@/components/CTA';
 import TrustBadges from '@/components/TrustBadges';
 import SocialProof from '@/components/SocialProof';
@@ -21,7 +21,6 @@ const Index = () => {
 
       <TrustBadges />
       <ServicesSection />
-      <PhotoShowcase />
 
       {/* Why Choose Us */}
       <section className="py-16 bg-white">
