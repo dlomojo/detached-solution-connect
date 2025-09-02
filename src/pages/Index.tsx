@@ -49,7 +49,7 @@ const Index = () => {
                 <CheckCircle className="h-6 w-6 text-green-600 mt-1 flex-shrink-0" />
                 <div>
                   <h3 className="font-semibold text-slate-900 mb-2">Proactive Support</h3>
-                  <p className="text-slate-600">We fix problems before they impact your business. Our monitoring catches issues 24/7.</p>
+                  <p className="text-slate-600">We fix problems before they impact your business. Our monitoring catches issues around the clock.</p>
                 </div>
               </div>
               <div className="flex items-start space-x-4 text-left">

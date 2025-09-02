@@ -58,7 +58,7 @@ const Contact = () => {
       icon: Phone,
       title: "Call Us",
       details: "(301) 555-0123",
-      description: "Available 24/7 for emergencies",
+      description: "Available for emergency support",
       color: "blue"
     },
     {
@@ -72,7 +72,7 @@ const Contact = () => {
       icon: Clock,
       title: "Business Hours",
       details: "Mon-Fri: 8AM-6PM",
-      description: "Emergency support 24/7",
+      description: "Emergency support available",
       color: "purple"
     }
   ];
@@ -146,7 +146,7 @@ const Contact = () => {
                     <p className="text-blue-600 font-medium">(301) 555-0123</p>
                   </div>
                 </div>
-                <p className="text-slate-600">Available 24/7 for emergencies</p>
+                <p className="text-slate-600">Available for emergency support</p>
               </CardContent>
             </Card>
             <Card className="border-l-4 border-l-green-600 hover:shadow-lg transition-shadow duration-300">

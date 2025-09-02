@@ -44,7 +44,7 @@ const About = () => {
   const stats = [
     { number: "50+", label: "Happy Clients" },
     { number: "99.7%", label: "Uptime Guarantee" },
-    { number: "24/7", label: "Support Available" },
+    { number: "<4hr", label: "Response Time" },
     { number: "10+", label: "Years Experience" }
   ];
 

@@ -6,7 +6,7 @@ const items = [
   {
     image: "https://images.unsplash.us/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
     title: "Managed Helpdesk",
-    blurb: "24/7 remote support, device hardening, patching, and onboarding that doesn't slow teams down."
+    blurb: "Remote support, device hardening, patching, and onboarding that doesn't slow teams down."
   },
   {
     image: "https://images.unsplash.us/photo-1544197150-b99a580bb7a8?w=400&h=300&fit=crop",

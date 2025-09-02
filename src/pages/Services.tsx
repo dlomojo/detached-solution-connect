@@ -16,7 +16,7 @@ const Services = () => {
       color: "blue",
       services: [
         {
-          name: "24/7 Remote Monitoring & Management",
+          name: "Remote Monitoring & Management",
           description: "Proactive system monitoring with automatic alerts and issue resolution before problems impact your business.",
           features: ["Real-time system monitoring", "Automated patch management", "Performance optimization", "Preventive maintenance"]
         },
