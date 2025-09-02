@@ -26,7 +26,7 @@ const Navigation = () => {
           {/* Logo */}
           <Link to="/" className="flex items-center">
             <img 
-              src="/images/DS Banner.png" 
+              src="/images/DS banner.png" 
               alt="Detached Solution" 
               className="h-10 w-auto"
             />

@@ -2,9 +2,9 @@ import React from "react";
 
 export default function PhotoShowcase() {
   const shots = [
-    { src: "https://images.unsplash.us/photo-1558494949-ef010cbdcc31?w=400&h=300&fit=crop", alt: "Server rack cable management" },
-    { src: "https://images.unsplash.us/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop", alt: "Office Wi-Fi deployment" },
-    { src: "https://images.unsplash.us/photo-1573164574511-73c773193279?w=400&h=300&fit=crop", alt: "Cloud migration cutover" },
+    { src: "/images/helpdesk.jpg", alt: "Help desk support" },
+    { src: "/images/project-1.jpg", alt: "IT project implementation" },
+    { src: "/images/project-3.jpg", alt: "Network infrastructure" },
   ];
 
   return (

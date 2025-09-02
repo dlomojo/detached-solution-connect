@@ -4,7 +4,7 @@ import { openCalendlyPopup } from './CalendlyWidget';
 
 const items = [
   {
-    image: "https://images.unsplash.us/photo-1551288049-bebda4e38f71?w=400&h=300&fit=crop",
+    image: "/images/helpdesk.jpg",
     title: "Managed Helpdesk",
     blurb: "Remote support, device hardening, patching, and onboarding that doesn't slow teams down."
   },

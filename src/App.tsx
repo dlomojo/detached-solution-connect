@@ -11,6 +11,7 @@ import Contact from "./pages/Contact";
 import Resources from "./pages/Resources";
 import NotFound from "./pages/NotFound";
 import CalendlyWidget from "./components/CalendlyWidget";
+import ScrollToTop from "./components/ScrollToTop";
 
 const queryClient = new QueryClient();
 
@@ -22,6 +23,7 @@ const App = () => {
       <Toaster />
       <Sonner />
       <BrowserRouter>
+        <ScrollToTop />
         <Routes>
           <Route path="/" element={<Index />} />
           <Route path="/services" element={<Services />} />
