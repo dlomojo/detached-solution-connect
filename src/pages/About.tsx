@@ -4,7 +4,7 @@ import { Button } from "@/components/ui/button";
 import { Users, Heart, Shield, CheckCircle, Award, Clock, ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import Hero from '@/components/Hero';
+import PageHeader from '@/components/PageHeader';
 import TrustBadges from '@/components/TrustBadges';
 import { openCalendlyPopup } from '@/components/CalendlyWidget';
 
@@ -51,11 +51,8 @@ const About = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
-      <div className="pt-20">
-        <Hero />
-        <TrustBadges />
-      </div>
+      <PageHeader title="About Us" subtitle="Learn more about our local team" />
+      <TrustBadges />
 
       {/* About Content */}
       <section className="py-16 bg-white">

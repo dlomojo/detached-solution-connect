@@ -4,9 +4,10 @@ import { Button } from "@/components/ui/button";
 import { Settings, Shield, Cloud, Users, Phone, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import Hero from '@/components/Hero';
+import PageHeader from '@/components/PageHeader';
 import TrustBadges from '@/components/TrustBadges';
 import { openCalendlyPopup } from '@/components/CalendlyWidget';
+import { siteConfig } from '@/lib/site';
 
 const Services = () => {
   const serviceCategories = [
@@ -128,11 +129,7 @@ const Services = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
-      <div className="pt-20">
-        <Hero />
-      </div>
-
+      <PageHeader title="Our Services" subtitle="Managed IT, cybersecurity, and more" />
       <TrustBadges />
 
       {/* Service Categories */}
@@ -212,7 +209,7 @@ const Services = () => {
             </Button>
             <Button size="lg" variant="outline" className="border-white text-white hover:bg-white hover:text-blue-600 px-8 py-3">
               <Phone className="mr-2 h-5 w-5" />
-              Call Now: (301) 555-0123
+              Call Now: {siteConfig.phone}
             </Button>
           </div>
         </div>

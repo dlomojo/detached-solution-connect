@@ -1,5 +1,6 @@
 import React from "react";
 import { openCalendlyPopup } from './CalendlyWidget';
+import { siteConfig } from '@/lib/site';
 
 export default function CTA() {
   return (
@@ -10,7 +11,7 @@ export default function CTA() {
       </p>
       <div className="mt-6 flex flex-wrap justify-center gap-3">
         <a
-          href="mailto:info@detachedsolution.com"
+          href={`mailto:${siteConfig.email}`}
           className="rounded-2xl bg-blue-600 px-5 py-3 text-sm font-medium text-white shadow transition hover:bg-blue-700"
         >
           Email us

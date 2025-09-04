@@ -7,10 +7,11 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Phone, Mail, Clock, Calendar } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import Hero from '@/components/Hero';
+import PageHeader from '@/components/PageHeader';
 import TrustBadges from '@/components/TrustBadges';
 import { useToast } from "@/hooks/use-toast";
 import { openCalendlyPopup } from '@/components/CalendlyWidget';
+import { siteConfig } from '@/lib/site';
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -57,14 +58,14 @@ const Contact = () => {
     {
       icon: Phone,
       title: "Call Us",
-      details: "(301) 555-0123",
+      details: siteConfig.phone,
       description: "Available for emergency support",
       color: "blue"
     },
     {
       icon: Mail,
       title: "Email Us",
-      details: "info@detachedsolution.com",
+      details: siteConfig.email,
       description: "We respond within 4 hours",
       color: "green"
     },
@@ -80,11 +81,8 @@ const Contact = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
-      <div className="pt-20">
-        <Hero />
-        <TrustBadges />
-      </div>
+      <PageHeader title="Contact Us" subtitle="We're here to help" />
+      <TrustBadges />
 
       {/* Contact Options */}
       <section className="py-16 bg-white">
@@ -143,7 +141,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-slate-900">Call Us</h3>
-                    <p className="text-blue-600 font-medium">(301) 555-0123</p>
+                    <p className="text-blue-600 font-medium">{siteConfig.phone}</p>
                   </div>
                 </div>
                 <p className="text-slate-600">Available for emergency support</p>
@@ -157,7 +155,7 @@ const Contact = () => {
                   </div>
                   <div>
                     <h3 className="font-bold text-lg text-slate-900">Email Us</h3>
-                    <p className="text-green-600 font-medium">info@detachedsolution.com</p>
+                    <p className="text-green-600 font-medium">{siteConfig.email}</p>
                   </div>
                 </div>
                 <p className="text-slate-600">We respond within 4 hours</p>

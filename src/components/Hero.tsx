@@ -5,7 +5,7 @@ export default function Hero() {
   return (
     <section className="relative min-h-[70vh] w-full overflow-hidden">
       <img
-        src="https://images.unsplash.us/photo-1581091226825-a6a2a5aee158?w=1200&h=800&fit=crop"
+        src="https://images.unsplash.com/photo-1581091226825-a6a2a5aee158?w=1200&h=800&fit=crop"
         alt="Professional IT support technician"
         className="absolute inset-0 h-full w-full object-cover"
         fetchPriority="high"

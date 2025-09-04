@@ -4,6 +4,7 @@ import { Sheet, SheetContent, SheetTrigger } from "@/components/ui/sheet";
 import { Menu, Phone } from 'lucide-react';
 import { Link, useLocation } from 'react-router-dom';
 import { openCalendlyPopup } from '@/components/CalendlyWidget';
+import { siteConfig } from '@/lib/site';
 
 const Navigation = () => {
   const [isOpen, setIsOpen] = useState(false);
@@ -53,7 +54,7 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-4">
             <Button variant="ghost" size="sm" className="text-slate-700">
               <Phone className="h-4 w-4 mr-2" />
-              (301) 555-0123
+              {siteConfig.phone}
             </Button>
             <Button size="sm" className="bg-blue-600 hover:bg-blue-700" onClick={openCalendlyPopup}>
               Free Consultation
@@ -86,7 +87,7 @@ const Navigation = () => {
                 <div className="pt-6 border-t border-slate-200 space-y-4">
                   <Button variant="ghost" className="w-full justify-start text-slate-700">
                     <Phone className="h-4 w-4 mr-2" />
-                    (301) 555-0123
+                    {siteConfig.phone}
                   </Button>
                   <Button className="w-full bg-blue-600 hover:bg-blue-700" onClick={openCalendlyPopup}>
                     Free Consultation
