@@ -2,6 +2,7 @@ import React from 'react';
 import { Button } from "@/components/ui/button";
 import { Phone, Mail, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
+import { siteConfig } from '@/lib/site';
 
 const Footer = () => {
   return (
@@ -54,11 +55,11 @@ const Footer = () => {
             <ul className="space-y-4">
               <li className="flex items-start space-x-3">
                 <Phone className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-300">(301) 555-0123</span>
+                <span className="text-slate-300">{siteConfig.phone}</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Mail className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />
-                <span className="text-slate-300">info@detachedsolution.com</span>
+                <span className="text-slate-300">{siteConfig.email}</span>
               </li>
               <li className="flex items-start space-x-3">
                 <Clock className="h-5 w-5 text-blue-400 mt-0.5 flex-shrink-0" />

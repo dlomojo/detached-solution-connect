@@ -7,7 +7,7 @@ import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/
 import { FileText, Shield, Cloud, Settings, Users, CheckCircle, ArrowRight } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
-import Hero from '@/components/Hero';
+import PageHeader from '@/components/PageHeader';
 import TrustBadges from '@/components/TrustBadges';
 import { openCalendlyPopup } from '@/components/CalendlyWidget';
 
@@ -108,11 +108,8 @@ const Resources = () => {
   return (
     <div className="min-h-screen bg-background">
       <Navigation />
-      
-      <div className="pt-20">
-        <Hero />
-        <TrustBadges />
-      </div>
+      <PageHeader title="Resources" subtitle="Helpful guides and FAQs" />
+      <TrustBadges />
 
       {/* Quick IT Tips */}
       <section className="py-16 bg-white">
@@ -242,7 +239,7 @@ const Resources = () => {
                 Emergency Support: (555) 123-4567
               </Button>
               <Button size="lg" variant="outline" className="border-red-600 text-red-600 hover:bg-red-50">
-                Email: emergency@detachedsolution.com
+                Email: emergency@detachedsolution.us
               </Button>
             </div>
           </div>
