@@ -8,11 +8,13 @@ import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import Hero from '@/components/Hero';
 import ServicesSection from '@/components/ServicesSection';
-
 import CTA from '@/components/CTA';
 import TrustBadges from '@/components/TrustBadges';
 import SocialProof from '@/components/SocialProof';
 import MobileBottomNav from '@/components/MobileBottomNav';
+import TestimonialsCarousel from '@/components/TestimonialsCarousel';
+import StatsSection from '@/components/StatsSection';
+import CaseStudies from '@/components/CaseStudies';
 
 const Index = () => {
   return (
@@ -22,12 +24,15 @@ const Index = () => {
 
       <TrustBadges />
       <ServicesSection />
+      <StatsSection />
 
       {/* Why Choose Us */}
       <section className="py-16 bg-slate-800/50 pb-24 md:pb-16">
         <div className="container mx-auto px-4">
           <div className="max-w-4xl mx-auto text-center">
             <h2 className="text-3xl md:text-4xl font-bold text-white mb-12">
+            <Badge className="bg-blue-600 text-white mb-4">Why Choose Us</Badge>
+            <h2 className="text-3xl md:text-4xl font-bold text-slate-900 mb-12">
               Why Small Businesses Choose Us
             </h2>
             <div className="grid md:grid-cols-2 gap-8">
@@ -64,8 +69,8 @@ const Index = () => {
         </div>
       </section>
 
-
-
+      <CaseStudies />
+      <TestimonialsCarousel />
       <SocialProof />
       <CTA />
 
