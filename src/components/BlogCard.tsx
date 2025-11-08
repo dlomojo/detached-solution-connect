@@ -1,7 +1,7 @@
 import React from 'react';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
-import { Calendar, Clock, User } from 'lucide-react';
+import { Calendar, Clock } from 'lucide-react';
 import { Link } from 'react-router-dom';
 import { BlogPost } from '@/types/blog';
 import { format } from 'date-fns';
@@ -36,11 +36,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ post, featured = false }) => {
             <CardDescription className="text-base mt-2">{post.excerpt}</CardDescription>
           </CardHeader>
           <CardContent>
-            <div className="flex items-center gap-4 text-sm text-slate-600">
-              <div className="flex items-center gap-1">
-                <User className="h-4 w-4" />
-                <span>{post.author.name}</span>
-              </div>
+            <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600">
               <div className="flex items-center gap-1">
                 <Calendar className="h-4 w-4" />
                 <span>{formattedDate}</span>

@@ -1,92 +1,114 @@
 import React from "react";
-import { openCalendlyPopup } from '@/components/CalendlyWidget';
-import TypewriterText from '@/components/TypewriterText';
+import { Link } from "react-router-dom";
+import { ShieldCheck, Clock, Headset, ArrowRight } from "lucide-react";
+import { Button } from "@/components/ui/button";
+import { openCalendlyPopup } from "@/components/CalendlyWidget";
+
+const highlights = [
+  "Locally based support team with same-day response",
+  "Flat-rate plans that scale with your company",
+  "Security-first mindset with proactive monitoring",
+];
 
 export default function Hero() {
   return (
-    <section className="relative min-h-screen w-full overflow-hidden bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-      {/* Animated background */}
-      <div className="absolute inset-0 bg-gradient-to-br from-slate-900 via-blue-900 to-slate-900">
-        <div className="absolute inset-0 bg-gradient-to-br from-transparent via-blue-500/10 to-transparent animate-pulse"></div>
-      </div>
-      
-      {/* Animated particles */}
-      <div className="absolute inset-0 overflow-hidden">
-        <div className="absolute w-2 h-2 bg-blue-400/30 rounded-full animate-pulse" style={{top: '20%', left: '10%', animationDelay: '0s'}}></div>
-        <div className="absolute w-1 h-1 bg-red-400/40 rounded-full animate-pulse" style={{top: '60%', left: '80%', animationDelay: '1s'}}></div>
-        <div className="absolute w-3 h-3 bg-white/20 rounded-full animate-pulse" style={{top: '40%', left: '70%', animationDelay: '2s'}}></div>
-        <div className="absolute w-1 h-1 bg-blue-300/50 rounded-full animate-pulse" style={{top: '80%', left: '20%', animationDelay: '3s'}}></div>
-        <div className="absolute w-2 h-2 bg-red-300/30 rounded-full animate-pulse" style={{top: '30%', left: '90%', animationDelay: '4s'}}></div>
-      </div>
+    <section className="relative bg-white">
+      <div className="absolute inset-x-0 bottom-0 h-1/2 bg-slate-50" aria-hidden />
+      <div className="container mx-auto px-6 py-24 md:py-28">
+        <div className="flex flex-col lg:flex-row items-center gap-16">
+          <div className="w-full lg:w-1/2 space-y-8">
+            <div className="space-y-3">
+              <span className="inline-flex items-center rounded-full bg-blue-50 px-3 py-1 text-sm font-semibold text-blue-700">
+                Managed IT for small & mid-sized teams
+              </span>
+              <h1 className="text-4xl md:text-5xl font-bold tracking-tight text-slate-900">
+                Reliable IT support that feels like an in-house team.
+              </h1>
+              <p className="text-lg md:text-xl text-slate-600 leading-relaxed">
+                Detached Solution keeps your technology running smoothly with proactive monitoring, clear communication, and people who know your business by name.
+              </p>
+            </div>
 
-      <div className="relative z-10 mx-auto flex max-w-7xl flex-col items-center justify-center min-h-screen gap-8 px-6 py-24 text-white text-center">
-        {/* Company Name Display */}
-        <div className="flex items-center justify-center gap-8 md:gap-12 mb-8">
-          {/* House/Computer Logo */}
-          <div className="w-32 h-32 md:w-40 md:h-40">
-            <svg viewBox="0 0 150 150" className="w-full h-full drop-shadow-2xl">
-              <g stroke="#fff" strokeWidth="4" fill="none">
-                <path d="M75 20 L130 60 L130 120 L20 120 L20 60 Z" />
-                <path d="M15 65 L75 15 L135 65" strokeWidth="5" />
-                <rect x="60" y="75" width="30" height="45" fill="#3b82f6" stroke="#fff" />
-                <rect x="40" y="85" width="35" height="25" stroke="#3b82f6" fill="#1e3a8a" />
-                <rect x="75" y="85" width="35" height="25" stroke="#3b82f6" fill="#1e3a8a" />
-              </g>
-            </svg>
+            <ul className="space-y-3">
+              {highlights.map((item) => (
+                <li key={item} className="flex items-start gap-3 text-slate-700">
+                  <ShieldCheck className="mt-1 h-5 w-5 text-blue-600" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+
+            <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">
+              <Button
+                size="lg"
+                className="bg-blue-600 hover:bg-blue-700"
+                onClick={openCalendlyPopup}
+              >
+                Book a consultation
+                <ArrowRight className="ml-2 h-4 w-4" />
+              </Button>
+              <Button
+                size="lg"
+                variant="outline"
+                className="border-slate-300 text-slate-900 hover:bg-slate-100"
+                asChild
+              >
+                <Link to="/services">Explore services</Link>
+              </Button>
+            </div>
           </div>
-          
-          {/* Company Name */}
-          <div className="text-left">
-            <h1 className="text-6xl md:text-8xl lg:text-9xl font-black leading-none tracking-tight">
-              <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent drop-shadow-2xl animate-pulse">
-                DETACHED
-              </span>
-              <br />
-              <span className="bg-gradient-to-r from-white via-blue-200 to-white bg-clip-text text-transparent drop-shadow-2xl animate-pulse ml-8 md:ml-12">
-                SOLUTIONS
-              </span>
-            </h1>
-          </div>
-          
-          {/* American Flag */}
-          <div className="w-24 h-16 md:w-32 md:h-20 relative">
-            <div className="w-full h-full bg-gradient-to-b from-red-600 via-white to-red-600 relative border border-white/20 shadow-2xl">
-              <div className="absolute top-0 left-0 w-2/5 h-3/5 bg-blue-800"></div>
-              {/* Stripes */}
-              <div className="absolute inset-0">
-                {[...Array(7)].map((_, i) => (
-                  <div key={i} className={`absolute w-full h-[7.14%] ${i % 2 === 0 ? 'bg-red-600' : 'bg-white'}`} style={{top: `${i * 14.28}%`}}></div>
-                ))}
+
+          <div className="w-full lg:w-1/2">
+            <div className="relative rounded-2xl border border-slate-200 bg-white shadow-lg">
+              <div className="grid gap-6 p-8">
+                <div>
+                  <p className="text-sm font-semibold text-blue-600 uppercase tracking-wide">
+                    What you can expect
+                  </p>
+                  <h2 className="text-2xl font-semibold text-slate-900 mt-2">
+                    A steady partner focused on uptime, security, and clarity.
+                  </h2>
+                </div>
+
+                <div className="grid gap-4">
+                  <div className="flex items-center gap-4 rounded-xl border border-slate-100 bg-slate-50/60 p-4">
+                    <Clock className="h-10 w-10 text-blue-600" />
+                    <div>
+                      <p className="text-sm font-semibold text-slate-700 uppercase tracking-wide">
+                        Response time
+                      </p>
+                      <p className="text-lg font-semibold text-slate-900">
+                        Under 30 minutes for priority tickets
+                      </p>
+                    </div>
+                  </div>
+                  <div className="flex items-center gap-4 rounded-xl border border-slate-100 bg-slate-50/60 p-4">
+                    <Headset className="h-10 w-10 text-blue-600" />
+                    <div>
+                      <p className="text-sm font-semibold text-slate-700 uppercase tracking-wide">
+                        Coverage
+                      </p>
+                      <p className="text-lg font-semibold text-slate-900">
+                        24/7 monitoring with live US-based support
+                      </p>
+                    </div>
+                  </div>
+                </div>
+
+                <div className="rounded-xl border border-blue-100 bg-blue-50/70 p-6">
+                  <p className="text-sm font-semibold text-blue-700 uppercase tracking-wide">
+                    Client snapshot
+                  </p>
+                  <p className="mt-2 text-lg text-slate-700">
+                    “Detached Solution keeps our 45-person firm running. They catch issues before we notice them and explain every change in plain language.”
+                  </p>
+                  <p className="mt-3 text-sm font-medium text-blue-700">
+                    Operations Director, Southern Maryland practice
+                  </p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-
-        {/* Veteran Owned Badge */}
-        <div className="text-2xl md:text-4xl font-bold text-blue-400 tracking-widest uppercase mb-4 animate-pulse">
-          ★ VETERAN OWNED BUSINESS ★
-        </div>
-        
-        {/* Subtitle */}
-        <div className="text-xl md:text-3xl font-light text-white/90 max-w-4xl leading-relaxed mb-8">
-          IT CONSULTING & MANAGED SERVICES<br />
-          FOR SMALL BUSINESSES
-        </div>
-
-        {/* CTA Buttons */}
-        <div className="flex flex-col sm:flex-row gap-6 justify-center">
-          <button
-            onClick={openCalendlyPopup}
-            className="group px-8 py-4 bg-gradient-to-r from-blue-600 to-blue-700 text-white font-semibold text-lg rounded-full shadow-2xl transition-all duration-300 hover:shadow-blue-500/25 hover:scale-105 hover:from-blue-500 hover:to-blue-600 uppercase tracking-wide"
-          >
-            Get Started Today
-          </button>
-          <a
-            href="#services"
-            className="px-8 py-4 bg-transparent border-2 border-white/30 text-white font-semibold text-lg rounded-full backdrop-blur-sm transition-all duration-300 hover:bg-white/10 hover:border-blue-400 hover:scale-105 uppercase tracking-wide"
-          >
-            View Our Services
-          </a>
         </div>
       </div>
     </section>

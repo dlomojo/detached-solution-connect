@@ -86,11 +86,6 @@ Managed IT services shift you from reactive to proactive:
 
 If you recognized your business in two or more of these signs, it's time for a conversation. Contact us for a free IT assessment and learn how managed services can transform your technology from a headache into a competitive advantage.
     `,
-    author: {
-      name: "Michael Chen",
-      role: "Senior IT Consultant",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
-    },
     category: "IT Strategy",
     tags: ["Managed Services", "Small Business", "IT Support"],
     publishedAt: "2025-11-01T09:00:00Z",
@@ -216,11 +211,6 @@ Don't wait until you're a victim. Start with these immediate steps:
 
 **Need help?** Our team provides free security assessments for small businesses. We'll identify your vulnerabilities and create a protection roadmap that fits your budget.
     `,
-    author: {
-      name: "Sarah Martinez",
-      role: "Cybersecurity Specialist",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
-    },
     category: "Cybersecurity",
     tags: ["Ransomware", "Security", "Best Practices", "Data Protection"],
     publishedAt: "2025-10-28T10:30:00Z",
@@ -411,11 +401,6 @@ We help businesses choose and migrate to the right platform. Our process:
 
 **Get started:** Contact us for a free consultation and platform recommendation.
     `,
-    author: {
-      name: "David Park",
-      role: "Cloud Solutions Architect",
-      avatar: "https://images.unsplash.com/photo-1500648767791-00dcc994a43e?w=100&h=100&fit=crop"
-    },
     category: "Cloud Computing",
     tags: ["Microsoft 365", "Google Workspace", "Cloud", "Productivity"],
     publishedAt: "2025-10-25T14:00:00Z",
@@ -566,11 +551,6 @@ We provide complete remote work security solutions:
 
 **Contact us** for a free remote work security audit.
     `,
-    author: {
-      name: "Sarah Martinez",
-      role: "Cybersecurity Specialist",
-      avatar: "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?w=100&h=100&fit=crop"
-    },
     category: "Cybersecurity",
     tags: ["Remote Work", "Security", "VPN", "Best Practices"],
     publishedAt: "2025-10-21T08:00:00Z",
@@ -846,11 +826,6 @@ Backup seems simple but gets complex quickly. We help businesses:
 
 Don't wait for disaster to strike. Protect your business data today.
     `,
-    author: {
-      name: "Michael Chen",
-      role: "Senior IT Consultant",
-      avatar: "https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=100&h=100&fit=crop"
-    },
     category: "Cloud Computing",
     tags: ["Backup", "Cloud", "Disaster Recovery", "Data Protection"],
     publishedAt: "2025-10-18T11:00:00Z",

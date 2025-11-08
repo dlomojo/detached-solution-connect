@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, CardContent } from "@/components/ui/card";
-import { TrendingUp, Users, Clock, Shield } from 'lucide-react';
+import { TrendingUp, Users, ShieldCheck, Laptop } from 'lucide-react';
 
 interface Stat {
   icon: React.ElementType;
@@ -11,86 +10,60 @@ interface Stat {
 
 const stats: Stat[] = [
   {
-    icon: TrendingUp,
-    value: "99.9%",
-    label: "Uptime Guarantee",
-    description: "Industry-leading reliability for your critical systems"
-  },
-  {
     icon: Users,
-    value: "150+",
-    label: "Active Clients",
-    description: "Small businesses trusting us with their IT"
+    value: "62",
+    label: "Managed clients",
+    description: "Professional services, healthcare, non-profit, and retail teams." 
   },
   {
-    icon: Clock,
-    value: "<15min",
-    label: "Avg Response Time",
-    description: "Fast support when you need it most"
+    icon: TrendingUp,
+    value: "97%",
+    label: "Same-day ticket closure",
+    description: "Measured across all priority support requests in 2025."
   },
   {
-    icon: Shield,
-    value: "100%",
-    label: "Security Coverage",
-    description: "Comprehensive protection against cyber threats"
+    icon: ShieldCheck,
+    value: "12",
+    label: "Security assessments / quarter",
+    description: "Regular reviews keep policies, backups, and MFA current."
+  },
+  {
+    icon: Laptop,
+    value: "4.8/5",
+    label: "Customer satisfaction",
+    description: "Average rating from quarterly customer check-ins."
   }
 ];
 
 const StatsSection = () => {
   return (
-    <section className="py-16 bg-gradient-to-br from-blue-600 to-blue-800 text-white relative overflow-hidden">
-      {/* Background Pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute inset-0" style={{
-          backgroundImage: `url("data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='1'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")`,
-        }} />
-      </div>
-
-      <div className="container mx-auto px-4 relative z-10">
-        <div className="text-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">
-            Proven Results, Measurable Success
+    <section className="bg-slate-50 py-20">
+      <div className="container mx-auto px-6">
+        <div className="mx-auto max-w-2xl text-center">
+          <p className="text-sm font-semibold uppercase tracking-wide text-blue-600">Proof in the numbers</p>
+          <h2 className="mt-2 text-3xl font-semibold text-slate-900 md:text-4xl">
+            A partner accountable to real outcomes
           </h2>
-          <p className="text-xl text-blue-100 max-w-2xl mx-auto">
-            Numbers that demonstrate our commitment to excellence and client satisfaction
+          <p className="mt-4 text-base text-slate-600">
+            We monitor the metrics that matter: fast response, predictable delivery, and a support experience your staff actually appreciates.
           </p>
         </div>
 
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 max-w-6xl mx-auto">
-          {stats.map((stat, index) => (
-            <Card key={index} className="bg-white/10 backdrop-blur-sm border-white/20 hover:bg-white/15 transition-all duration-300 hover:scale-105">
-              <CardContent className="p-6 text-center">
-                <div className="w-14 h-14 bg-white/20 rounded-full flex items-center justify-center mx-auto mb-4">
-                  <stat.icon className="h-7 w-7 text-white" />
+        <div className="mt-12 grid gap-6 md:grid-cols-2 xl:grid-cols-4">
+          {stats.map((stat) => (
+            <div key={stat.label} className="flex flex-col gap-3 rounded-2xl border border-slate-200 bg-white p-6 shadow-sm">
+              <div className="flex items-center gap-3">
+                <div className="flex h-10 w-10 items-center justify-center rounded-full bg-blue-50">
+                  <stat.icon className="h-5 w-5 text-blue-600" />
                 </div>
-                <div className="text-4xl md:text-5xl font-bold mb-2">{stat.value}</div>
-                <div className="text-lg font-semibold mb-2">{stat.label}</div>
-                <div className="text-sm text-blue-100">{stat.description}</div>
-              </CardContent>
-            </Card>
+                <span className="text-sm font-semibold uppercase tracking-wide text-slate-600">
+                  {stat.label}
+                </span>
+              </div>
+              <div className="text-4xl font-semibold text-slate-900">{stat.value}</div>
+              <p className="text-sm text-slate-600">{stat.description}</p>
+            </div>
           ))}
-        </div>
-
-        {/* Additional Trust Indicators */}
-        <div className="mt-12 pt-8 border-t border-white/20">
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-8 text-center">
-            <div>
-              <div className="text-3xl font-bold mb-1">24/7</div>
-              <div className="text-sm text-blue-100">Monitoring</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-1">98%</div>
-              <div className="text-sm text-blue-100">Client Retention</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-1">12</div>
-              <div className="text-sm text-blue-100">Years Experience</div>
-            </div>
-            <div>
-              <div className="text-3xl font-bold mb-1">5,000+</div>
-              <div className="text-sm text-blue-100">Tickets Resolved</div>
-            </div>
-          </div>
         </div>
       </div>
     </section>

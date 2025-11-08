@@ -24,18 +24,9 @@ const Navigation = () => {
   return (
     <nav className="fixed top-0 left-0 right-0 z-50 bg-slate-900/95 backdrop-blur-sm border-b border-slate-700 relative">
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-16">
-          {/* Logo */}
-          <Link to="/" className="flex items-center">
-            <img 
-              src="/images/DS banner.png" 
-              alt="Detached Solution" 
-              className="h-10 w-auto"
-            />
-          </Link>
-
+        <div className="flex items-center h-16">
           {/* Desktop Navigation */}
-          <div className="hidden md:flex items-center space-x-8">
+          <div className="hidden md:flex items-center space-x-8 flex-1">
             {navItems.map((item) => (
               <Link
                 key={item.name}
@@ -51,8 +42,19 @@ const Navigation = () => {
             ))}
           </div>
 
+          {/* Logo */}
+          <div className="flex flex-1 justify-center md:flex-initial">
+            <Link to="/" className="flex items-center">
+              <img 
+                src="/images/DS banner.png" 
+                alt="Detached Solution" 
+                className="h-10 w-auto"
+              />
+            </Link>
+          </div>
+
           {/* Desktop CTA */}
-          <div className="hidden md:flex items-center space-x-4">
+          <div className="hidden md:flex items-center space-x-4 flex-1 justify-end">
             <Button variant="ghost" size="sm" className="text-white hover:text-blue-400">
               <Phone className="h-4 w-4 mr-2" />
               (301) 555-0123
@@ -63,13 +65,14 @@ const Navigation = () => {
           </div>
 
           {/* Mobile Menu Button */}
-          <Sheet open={isOpen} onOpenChange={setIsOpen}>
-            <SheetTrigger asChild>
-              <Button variant="ghost" size="sm" className="md:hidden">
-                <Menu className="h-5 w-5" />
-              </Button>
-            </SheetTrigger>
-            <SheetContent side="right" className="w-80">
+          <div className="md:hidden ml-auto">
+            <Sheet open={isOpen} onOpenChange={setIsOpen}>
+              <SheetTrigger asChild>
+                <Button variant="ghost" size="sm">
+                  <Menu className="h-5 w-5" />
+                </Button>
+              </SheetTrigger>
+              <SheetContent side="right" className="w-80">
               <div className="flex flex-col space-y-6 mt-8">
                 {navItems.map((item) => (
                   <Link
@@ -95,8 +98,9 @@ const Navigation = () => {
                   </Button>
                 </div>
               </div>
-            </SheetContent>
-          </Sheet>
+              </SheetContent>
+            </Sheet>
+          </div>
         </div>
       </div>
       <ScrollProgress />

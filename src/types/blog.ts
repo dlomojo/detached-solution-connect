@@ -4,11 +4,6 @@ export interface BlogPost {
   title: string;
   excerpt: string;
   content: string;
-  author: {
-    name: string;
-    role: string;
-    avatar?: string;
-  };
   category: string;
   tags: string[];
   publishedAt: string;

@@ -3,7 +3,6 @@ import { useParams, Link, Navigate } from 'react-router-dom';
 import { Button } from "@/components/ui/button";
 import { Badge } from "@/components/ui/badge";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
-import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import { Calendar, Clock, ArrowLeft, Share2, Facebook, Twitter, Linkedin } from 'lucide-react';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
@@ -42,7 +41,6 @@ const BlogPost = () => {
         <title>{post.title} | Detached Solution Blog</title>
         <meta name="description" content={post.excerpt} />
         <meta name="keywords" content={post.tags.join(', ')} />
-        <meta name="author" content={post.author.name} />
         <link rel="canonical" href={postUrl} />
 
         {/* Open Graph */}
@@ -52,7 +50,6 @@ const BlogPost = () => {
         <meta property="og:url" content={postUrl} />
         <meta property="og:image" content={post.featuredImage} />
         <meta property="article:published_time" content={post.publishedAt} />
-        <meta property="article:author" content={post.author.name} />
         <meta property="article:section" content={post.category} />
         {post.tags.map(tag => (
           <meta key={tag} property="article:tag" content={tag} />
@@ -75,9 +72,9 @@ const BlogPost = () => {
             "datePublished": post.publishedAt,
             "dateModified": post.updatedAt || post.publishedAt,
             "author": {
-              "@type": "Person",
-              "name": post.author.name,
-              "jobTitle": post.author.role
+              "@type": "Organization",
+              "name": "Detached Solution",
+              "url": "https://detachedsolution.us"
             },
             "publisher": {
               "@type": "Organization",
@@ -162,27 +159,19 @@ const BlogPost = () => {
                 {post.excerpt}
               </p>
 
-              {/* Author & Meta */}
-              <div className="flex flex-wrap items-center gap-6 pb-8 border-b">
-                <div className="flex items-center gap-3">
-                  <Avatar className="h-12 w-12">
-                    <AvatarImage src={post.author.avatar} alt={post.author.name} />
-                    <AvatarFallback>{post.author.name.split(' ').map(n => n[0]).join('')}</AvatarFallback>
-                  </Avatar>
-                  <div>
-                    <div className="font-semibold text-slate-900">{post.author.name}</div>
-                    <div className="text-sm text-slate-600">{post.author.role}</div>
-                  </div>
-                </div>
-
-                <div className="flex flex-wrap items-center gap-4 text-sm text-slate-600">
-                  <div className="flex items-center gap-1">
-                    <Calendar className="h-4 w-4" />
-                    <span>{formattedDate}</span>
-                  </div>
-                  <div className="flex items-center gap-1">
-                    <Clock className="h-4 w-4" />
-                    <span>{post.readTime} min read</span>
+              {/* Publication Meta */}
+              <div className="flex flex-wrap items-center gap-4 pb-8 border-b">
+                <div className="flex flex-col gap-2 text-sm text-slate-600 flex-1 min-w-[220px]">
+                  <span className="font-semibold text-slate-900">Detached Solution Team</span>
+                  <div className="flex flex-wrap items-center gap-4">
+                    <div className="flex items-center gap-1">
+                      <Calendar className="h-4 w-4" />
+                      <span>{formattedDate}</span>
+                    </div>
+                    <div className="flex items-center gap-1">
+                      <Clock className="h-4 w-4" />
+                      <span>{post.readTime} min read</span>
+                    </div>
                   </div>
                 </div>
 

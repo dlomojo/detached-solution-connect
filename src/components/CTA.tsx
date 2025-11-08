@@ -1,26 +1,36 @@
 import React from "react";
-import { openCalendlyPopup } from './CalendlyWidget';
+import { Button } from "@/components/ui/button";
+import { openCalendlyPopup } from "./CalendlyWidget";
 
 export default function CTA() {
   return (
-    <section id="contact" className="mx-auto max-w-4xl px-6 py-16 text-center md:px-8">
-      <h2 className="text-2xl font-bold md:text-3xl">Ready to simplify your IT?</h2>
-      <p className="mx-auto mt-3 max-w-2xl text-slate-600">
-        Tell us about your stack and pain points—we'll propose a right-sized plan and timeline.
-      </p>
-      <div className="mt-6 flex flex-wrap justify-center gap-3">
-        <a
-          href="mailto:info@detachedsolution.com"
-          className="rounded-2xl bg-blue-600 px-5 py-3 text-sm font-medium text-white shadow transition hover:bg-blue-700"
-        >
-          Email us
-        </a>
-        <button
-          onClick={openCalendlyPopup}
-          className="rounded-2xl border border-slate-300 px-5 py-3 text-sm font-medium transition hover:bg-slate-50"
-        >
-          Book a 15-min call
-        </button>
+    <section id="contact" className="bg-blue-600 py-16 text-white">
+      <div className="container mx-auto flex flex-col items-center gap-6 px-6 text-center md:flex-row md:justify-between md:text-left">
+        <div className="max-w-2xl space-y-3">
+          <p className="text-sm font-semibold uppercase tracking-wide text-blue-100">Let’s get started</p>
+          <h2 className="text-3xl font-semibold md:text-4xl">Ready to lighten the load on your internal team?</h2>
+          <p className="text-base text-blue-100">
+            Share your current setup, short-term pain points, and where you want to be a year from now. We’ll come prepared with recommendations and clear next steps.
+          </p>
+        </div>
+        <div className="flex flex-col gap-3 md:items-end">
+          <Button
+            size="lg"
+            variant="secondary"
+            className="bg-white text-blue-700 hover:bg-blue-50"
+            onClick={openCalendlyPopup}
+          >
+            Schedule a 30-min call
+          </Button>
+          <Button
+            size="lg"
+            variant="ghost"
+            className="text-white hover:bg-blue-500 hover:text-white"
+            asChild
+          >
+            <a href="mailto:info@detachedsolution.com">Email the team</a>
+          </Button>
+        </div>
       </div>
     </section>
   );

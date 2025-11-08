@@ -70,10 +70,10 @@ const SwipeableServices: React.FC<SwipeableServicesProps> = ({ services, title, 
         >
           {services.map((service, index) => (
             <div key={index} className="w-full flex-shrink-0 px-2">
-              <Card className="border-l-4 h-full">
+              <Card className={`border-l-4 h-full bg-white shadow-sm border-l-${color}-500`}>
                 <CardHeader>
-                  <CardTitle className="text-lg">{service.name}</CardTitle>
-                  <CardDescription className="text-sm">
+                  <CardTitle className="text-lg text-slate-900">{service.name}</CardTitle>
+                  <CardDescription className="text-sm text-slate-600">
                     {service.description}
                   </CardDescription>
                 </CardHeader>
